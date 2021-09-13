@@ -48,13 +48,16 @@
                 margin-top: 120px;
                 transform: translate(0, 0);
             }
+            &__titulo, &__descripcion {
+                font-weight: 100;
+            }
             &__descripcion {
                 @media (min-width: 576px) {
                     width: 50%;
                 }
-            }
-            &__titulo, &__descripcion {
-                font-weight: 100;
+                @media (max-width: 575.98px) {
+                    font-weight: normal;
+                }
             }
             &__titulo.animate__animated.animate__fadeInUp {
                 animation-delay: .5s;

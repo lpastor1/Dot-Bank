@@ -135,13 +135,18 @@
             transform: translate(0, 0);
   }
 }
+#carrusel .carousel-item .tarjeta__titulo, #carrusel .carousel-item .tarjeta__descripcion {
+  font-weight: 100;
+}
 @media (min-width: 576px) {
   #carrusel .carousel-item .tarjeta__descripcion {
     width: 50%;
   }
 }
-#carrusel .carousel-item .tarjeta__titulo, #carrusel .carousel-item .tarjeta__descripcion {
-  font-weight: 100;
+@media (max-width: 575.98px) {
+  #carrusel .carousel-item .tarjeta__descripcion {
+    font-weight: normal;
+  }
 }
 #carrusel .carousel-item .tarjeta__titulo.animate__animated.animate__fadeInUp {
   -webkit-animation-delay: 0.5s;
