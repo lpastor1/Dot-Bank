@@ -90,6 +90,11 @@
   margin-left: 0;
   margin-right: 0;
 }
+@media (max-width: 575.98px) {
+  #carrusel .carousel-indicators {
+    bottom: 25vh;
+  }
+}
 #carrusel .carousel-indicators [data-bs-target="#carrusel"] {
   width: 10px;
   height: 10px;
