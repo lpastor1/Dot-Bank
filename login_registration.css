@@ -89,6 +89,10 @@
   --color_detalles: #36f1f8;
 }
 
+body {
+  background-color: var(--color_fondo);
+}
+
 .login-registration {
   height: 100vh;
   overflow: hidden;
