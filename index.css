@@ -1296,6 +1296,11 @@
 .etapas__circulo--icono {
   color: var(--color_principal);
 }
+@media (max-width: 575.98px) {
+  .etapas__circulo--icono.display-1 {
+    font-size: calc(1.625rem + 10vw);
+  }
+}
 .etapas__circulo sup {
   left: 0;
   top: 15px;

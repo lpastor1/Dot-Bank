@@ -46,6 +46,11 @@
         }
         &--icono {
             color: var(--color_principal);
+            &.display-1 {
+                @media (max-width: 575.98px) {
+                    font-size: calc(1.625rem + 10vw);
+                }
+            }
         }
         sup {
             left: 0;
