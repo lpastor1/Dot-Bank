@@ -12,20 +12,21 @@ html(lang="es")
         link(rel="shortcut icon", href="recursos/iconos/favicon.ico", type="image/x-icon")
         title Dot Bank
     body
-        include componentes/01-inicio/inicio
-        main
-            include componentes/02-datos/datos
-            include componentes/03-ventajas/ventajas
-            include componentes/04-detalles/detalles
-            include componentes/05-testimonios/testimonios
-            include componentes/06-estadisticas/estadisticas
-            include componentes/07-banner_tarjeta/banner_tarjeta
-            include componentes/08-etapas/etapas
-            include componentes/09-preguntas_frecuentes/preguntas_frecuentes
-            include componentes/10-publicaciones/publicaciones
-            include componentes/11-banner_newsletter/banner_newsletter
-            include componentes/12-contacto/contacto
-            include componentes/13-footer/footer
+        div#page
+            include componentes/01-inicio/inicio
+            main
+                include componentes/02-datos/datos
+                include componentes/03-ventajas/ventajas
+                include componentes/04-detalles/detalles
+                include componentes/05-testimonios/testimonios
+                include componentes/06-estadisticas/estadisticas
+                include componentes/07-banner_tarjeta/banner_tarjeta
+                include componentes/08-etapas/etapas
+                include componentes/09-preguntas_frecuentes/preguntas_frecuentes
+                include componentes/10-publicaciones/publicaciones
+                include componentes/11-banner_newsletter/banner_newsletter
+                include componentes/12-contacto/contacto
+                include componentes/13-footer/footer
 
         script(src="componentes/01-inicio/navbar.js") 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

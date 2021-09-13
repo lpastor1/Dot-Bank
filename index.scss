@@ -26,7 +26,6 @@
 }
 body {
     background-color: var(--color_fondo);
-    overflow-x: hidden;
 }
 body::-webkit-scrollbar{
     width: 12px;
@@ -39,4 +38,8 @@ body::-webkit-scrollbar-track{
     background: #5428a4;
     border: 4px solid #1D0D44;
     border-radius: 15px;
+}
+#page {
+    max-width: 100vw;
+    overflow-x: hidden;
 }
