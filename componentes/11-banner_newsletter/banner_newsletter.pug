@@ -1,0 +1,12 @@
+section.banner_newsletter.vw-100.py-4
+    .container.h-100.text-center
+        div.d-flex.justify-content-center.align-items-center.flex-wrap.h-100.text-white
+            span.display-5.banner_newsletter__texto Suscríbete a nuestro 
+                b.banner_tarjeta__texto--bold.d-block.d-sm-inline Newsletter
+            form.banner_newsletter__form(action="", method="post")
+                input.banner_newsletter__form--input(type="email", name="Correo", placeholder="Ingresá tu correo electrónico", required, autocomplete="email")
+                button.banner_newsletter__form--enviar.fs-4.position-relative(type="submit")
+                    <i class="bi bi-x position-absolute d-none"></i>
+                    <i class="bi bi-check position-absolute d-none"></i>
+                    <i class="bi bi-envelope"></i>
+

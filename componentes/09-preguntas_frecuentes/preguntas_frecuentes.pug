@@ -1,0 +1,111 @@
+- var itemPR_1 = ['¿Cuál es el monto de la Tarjeta Celeste?', 'La cantidad mínima que se puede cargar en la tarjeta es de USD 100 o una cantidad equivalente en otra moneda. La cantidad máxima varía según las pautas de Dot Bank aplicables para cada cliente. Puede obtener más información al respecto contactando a nuestros consultores.'];
+
+- var itemPR_2 = ['¿Qué tipo de navegador necesito para el Home Banking?', 'Nuestro sistema bancario es compatible con todos los navegadores. Algunos de los más populares son Chrome, Opera, Firefox y Safari. Si está utilizando Internet Explorer, asegúrese de que la versión de su navegador sea 9.0 o superior.'];
+
+- var itemPR_3 = ['¿Qué hago sí pierdo mi tarjeta?', 'Si pierde su tarjeta, comuníquese inmediatamente con nuestro centro de atención al cliente. Si se encuentra en Argentina, llame al 0810-424-6500; para otros países, comuníquese al 1-800-22-6999.'];
+
+- var itemPR_4 = ['¿Puedo realizar pagos en línea a destinatarios extranjeros?', '¡Sí, obvio! Nuestro banco no limita ningún pago a un país determinado, por lo que ya sea que esté utilizando nuestro sistema bancario en línea o una aplicación para su dispositivo, puede transferir de forma segura cualquier cantidad de dinero o comprar servicios y productos.'];
+
+- var itemPR_5 = ['¿Tengo que mantener un saldo mínimo?', 'Depende de la tarjeta que elijas. Por ejemplo, si elegís la tarjeta naranja, obtenes una exención especial sobre el requisito de saldo mínimo.'];
+
+- var itemPR_6 = ['¿Qué características de seguridad tiene el Mobile Banking?', 'Es muy similar al Home Banking. El navegador del celular reemplaza al navegador de una PC para acceder a los servicios bancarios. Algunas de las medidas de seguridad importantes implementadas son Certificado SSL de 128 bits de VeriSign, acceso basado en https: //, sistema de detección de intrusiones (IDS), implementación de un Firewall para bloquear accesos no autorizados, etc.'];
+
+
+section.preguntas_frecuentes#preguntas-frecuentes
+    .container.py-3.py-lg-5
+        h3.preguntas_frecuentes__titulo.display-5.text-center.text-white.mb-4 Preguntas Frecuentes
+        <div class="accordion accordion-flush d-lg-none py-3 py-lg-5" id="acordeon-preguntas_frecuentes">
+            <div class="accordion-item">
+                <h4 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    | #{itemPR_1[0]}
+                </button>
+                </h4>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#acordeon-preguntas_frecuentes">
+                <div class="accordion-body">
+                    | #{itemPR_1[1]}
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h4 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    | #{itemPR_2[0]}
+                </button>
+                </h4>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#acordeon-preguntas_frecuentes">
+                <div class="accordion-body">
+                    | #{itemPR_2[1]}
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h4 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    | #{itemPR_3[0]}
+                </button>
+                </h4>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#acordeon-preguntas_frecuentes">
+                <div class="accordion-body">
+                    | #{itemPR_3[1]}
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h4 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    | #{itemPR_4[0]}
+                </button>
+                </h4>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#acordeon-preguntas_frecuentes">
+                <div class="accordion-body">
+                    | #{itemPR_4[1]}
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h4 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    | #{itemPR_5[0]}
+                </button>
+                </h4>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#acordeon-preguntas_frecuentes">
+                <div class="accordion-body">
+                    | #{itemPR_5[1]}
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h4 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    | #{itemPR_6[0]}
+                </button>
+                </h4>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#acordeon-preguntas_frecuentes">
+                <div class="accordion-body">
+                    | #{itemPR_6[1]}
+                </div>
+                </div>
+            </div>
+        </div>
+        .row.preguntas_frecuentes__desktop.d-none.d-lg-flex.py-5 
+            .col-6 
+                h4.pregunta= itemPR_1[0] 
+                p.respuesta= itemPR_1[1]
+            .col-6 
+                h4.pregunta= itemPR_2[0] 
+                p.respuesta= itemPR_2[1]
+            .col-6 
+                h4.pregunta= itemPR_3[0] 
+                p.respuesta= itemPR_3[1]
+            .col-6 
+                h4.pregunta= itemPR_4[0] 
+                p.respuesta= itemPR_4[1]
+            .col-6 
+                h4.pregunta= itemPR_5[0] 
+                p.respuesta= itemPR_5[1]
+            .col-6 
+                h4.pregunta= itemPR_6[0] 
+                p.respuesta= itemPR_6[1]
+
+    

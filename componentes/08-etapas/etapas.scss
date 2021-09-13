@@ -1,0 +1,68 @@
+.etapas {
+    position: relative;
+    padding-top: 2rem;
+    .z-index-up {
+        position: relative;
+        z-index: 2;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 15%;
+        right: 15%;
+        top: calc(100px + 2rem);
+        transform: translate(0, 50%);
+        height: 2px;
+        background: rgba(81, 89, 117, 0.3);
+        @media (max-width: 1199.98px) { 
+            display: none;
+        }
+    }
+    &__titulo {
+        &::before {
+            content: "";
+            display: block;
+            height: 45px;
+            width: 2px;
+            margin: 0 auto 2rem auto;
+            background-color: var(--color_fuente2);
+            opacity: 0.5;
+        }
+    }
+    &__circulo {
+        display: grid;
+        place-items: center;
+        position: relative;
+        height: 200px;
+        width: 200px;
+        margin: 0 auto;
+        border: 2px solid rgba(81, 89, 117, 0.3);
+        border-radius: 50%;
+        box-shadow: 0 0 0 0 rgb(81 89 117 / 30%);
+        transition: box-shadow 250ms;
+        &:hover {
+            border: none;
+            box-shadow: 0 0 10px 0 rgb(81 89 117 / 30%);
+        }
+        &--icono {
+            color: var(--color_principal);
+        }
+        sup {
+            left: 0;
+            top: 15px;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: var(--color_principal);
+            font-size: 18px;
+            line-height: 40px;
+        }
+    }
+    &__nombre {
+        font-weight: 400;
+    }
+    &__descripcion {
+        color: var(--color_fuente2);
+        font-weight: 300;
+    }
+}

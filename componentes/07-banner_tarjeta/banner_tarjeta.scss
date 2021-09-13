@@ -1,0 +1,32 @@
+.banner_tarjeta {
+    height: clamp(150px, 20vh, 200px);
+    background-color: var(--color_principal);
+    .d-flex {
+        gap: 1.5rem 3rem;
+    }
+    &__texto {
+        @media (max-width: 575.98px) { font-size: calc(1.425rem + 1.5vw) }
+        white-space: nowrap;
+        &--bold {
+            font-weight: 500;
+        }
+    }
+    &__boton {
+        display: inline-block;
+        width: 200px;
+        height: 55px;
+        line-height: 55px;
+        border-radius: 40px;
+        background: var(--color_fondo);
+        font-size: 1.15rem;
+        letter-spacing: 1px;
+        box-shadow: 0 0 0 0px inset var(--color_principal),
+                    0 0 1px 0 var(--color_fondo),
+                    0 3px 21px 4px rgb(41 41 58 / 20%);
+        transition: box-shadow .5s linear;
+        &:hover {
+            box-shadow: 0 0 0 50px inset var(--color_principal),
+                        0 0 5px 0 var(--color_fondo);
+        }
+    }
+}

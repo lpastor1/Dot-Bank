@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="recursos/iconos/favicon.ico" type="image/x-icon"><link href="recursos/iconos/fontawesome/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="login_registration.css">
+    <title>Login/Registration</title>
+  </head>
+  <body> 
+    <div class="login-registration"><nav class="navbar navbar-expand-lg navbar-light bg-transparent position-fixed top-0 start-0 end-0 pt-4">
+<div class="navbar__fondo" id="fondo-navbar"></div>
+<div class="container justify-content-start justify-content-lg-between p-0">
+<a class="navbar-brand ms-3 ms-lg-0 order-1 order-lg-0" href="index.html">
+<img src="recursos/imagenes/logo-inverse-84x23.png" alt="" width="84" height="24" class="d-inline-block align-text-top">
+</a>
+<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-menu"></span>
+<span class="navbar-toggler-menu my-1"></span>
+<span class="navbar-toggler-menu"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-end order-2 order-lg-0 py-3 py-lg-0" id="navbarNav">
+<ul class="navbar-nav text-white">
+<li class="nav-item ms-2 mx-lg-4">
+<a class="nav-link d-inline-block text-white fs-5 px-2" href="index.html#beneficios">Beneficios</a>
+</li>
+<li class="nav-item ms-2 mx-lg-4">
+<a class="nav-link d-inline-block text-white fs-5 px-2" href="index.html#estadisticas">Estadísticas</a>
+</li>
+<li class="nav-item ms-2 mx-lg-4">
+<a class="nav-link d-inline-block text-white fs-5 px-2" href="index.html#preguntas-frecuentes">Preguntas Frecuentes</a>
+</li>
+<li class="nav-item ms-2 mx-lg-4">
+<a class="nav-link d-inline-block text-white fs-5 px-2" href="index.html#blog">Blog</a>
+</li>
+<li class="nav-item ms-2 mx-lg-4">
+<a class="nav-link d-inline-block text-white fs-5 px-2" href="index.html#contacto">Contacto</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+      <div class="container login-registration__container pt-5"> 
+        <div class="row h-100 justify-content-start text-center flex-column"> 
+          <input class="d-none" type="radio" name="login-registration" id="input-login" checked>
+          <input class="d-none" type="radio" name="login-registration" id="input-register">
+          <div class="login-registration__labels">
+            <label for="input-login">Login </label>
+            <label for="input-register">Register</label>
+          </div>
+          <form id="login" action="" method="POST"> 
+            <h2 class="display-5 mb-5">Login </h2>
+            <div class="inputs">
+              <input type="text" placeholder="Username or E-mail" required><br>
+              <div class="position-relative">
+                <input type="password" name="password" placeholder="Password" id="password-login" required><i class="bi bi-eye-fill position-absolute invisible" name="mostrar-pass" id="mostrar-pass"></i>
+<i class="bi bi-eye-slash-fill position-absolute invisible" name="ocultar-pass" id="ocultar-pass"></i>
+              </div>
+              <input type="submit" value="Login">
+            </div>
+          </form>
+          <form id="register" action="" method="POST"> 
+            <h2 class="display-5 mb-5">Registration</h2>
+            <div class="inputs">
+              <input type="text" placeholder="Username" required minlength="3"><br>
+              <input type="email" placeholder="E-mail" required><br>
+              <div class="position-relative">
+                <input type="password" name="password" placeholder="Password" id="register-password-1" required minlength="6" pattern="[0-9]+[A-Z]+[a-z]+|[0-9]+[a-z]+[A-Z]+|[A-Z]+[0-9]+[a-z]+|[A-Z]+[a-z]+[0-9]+|[a-z]+[A-Z]+[0-9]+|[0-9]+[a-z]+[A-Z]+"><i class="bi bi-eye-fill position-absolute invisible" name="mostrar-pass" id="mostrar-pass"></i>
+<i class="bi bi-eye-slash-fill position-absolute invisible" name="ocultar-pass" id="ocultar-pass"></i>
+              </div>
+              <input type="password" placeholder="Confirm Password" id="register-password-2" required><br>
+              <input type="submit" value="Register">
+            </div>
+          </form>
+        </div>
+        <div class="row login-registration__footer justify-content-center align-items-center">
+           © 2021 All rights reserved. Privacy Policy</div>
+      </div>
+    </div>
+    <script src="componentes/01-inicio/navbar.js"></script>
+    <script src="login_registration.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

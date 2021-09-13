@@ -1,0 +1,39 @@
+section.publicaciones#blog
+    .container.py-3
+        .row.publicaciones__intro.text-center.mb-5.mt-lg-5 
+            h3.publicaciones__intro--titulo.display-5.mb-4 Últimas Publicaciones
+            p.publicaciones__intro--bajada.mb-0 Nuestro equipo publica regularmente artículos sobre noticias bancarias y financieras, así como actualizaciones sobre ofertas especiales y consejos de nuestros consultores.
+        .row.gx-lg-5.gy-5.gy-lg-0.mb-5
+            article.col-12.col-lg-4.publicacion
+                div.publicacion__contenedor.bg-white.d-flex.flex-column
+                    figure.mb-0.position-relative.mb-5
+                        img.publicacion__imagen(src="recursos/imagenes/dot-blog-1.jpg", alt="Portada de la Noticia")
+                        img.publicacion__autor.position-absolute(src="recursos/imagenes/dot-autor-1.jpg", alt="Foto Autor de la Noticia" data-bs-toggle="tooltip" data-bs-placement="right" title="Ricardo RIGGI")
+                        figcaption.publicacion__volanta.position-absolute Finanzas Personales
+                    .div.publicacion__contenido-txt.p-4.pt-0.d-flex.flex-column.justify-content-around 
+                        h4.publicacion__contenido-txt--titulo.mb-0: a.text-decoration-none.text-reset(href="") Las cuatro razones por las que hay que invertir en la Bolsa
+                        p.publicacion__contenido-txt--cuerpo.mb-0 Aunque muchos tengan una visión negativa del mercado financiero, hay argumentos de sobra para invertir allí el dinero.
+                        time.publicacion__contenido-txt--fecha(datetime="2021-8-29") Agosto 29, 2021 
+            article.col-12.col-lg-4.publicacion
+                div.publicacion__contenedor.bg-white.d-flex.flex-column
+                    figure.mb-0.position-relative.mb-5
+                        img.publicacion__imagen(src="recursos/imagenes/dot-blog-2.jpg", alt="Portada de la Noticia")
+                        img.publicacion__autor.position-absolute(src="recursos/imagenes/dot-autor-2.jpg", alt="Foto Autor de la Noticia" data-bs-toggle="tooltip" data-bs-placement="right" title="Martin JERKOVIC")
+                        figcaption.publicacion__volanta.position-absolute Mercado Local
+                    .div.publicacion__contenido-txt.p-4.pt-0.d-flex.flex-column.justify-content-around 
+                        h4.publicacion__contenido-txt--titulo.mb-0: a.text-decoration-none.text-reset(href="") Rally a todo volumen: las acciones cerraron la semana con subas de hasta 5,7%
+                        p.publicacion__contenido-txt--cuerpo.mb-0  El Merval avanzó 2,3% y renovó así su máximo histórico en pesos. En tanto, los bonos en dólares registraron todos avances, en una jornada en la Wall Street operó al alza tras los comentarios del titular de la FED.
+                        time.publicacion__contenido-txt--fecha(datetime="2021-8-24") Agosto 24, 2021
+            article.col-12.col-lg-4.publicacion
+                div.publicacion__contenedor.bg-white.d-flex.flex-column
+                    figure.mb-0.position-relative.mb-5
+                        img.publicacion__imagen(src="recursos/imagenes/dot-blog-3.jpg", alt="Portada de la Noticia")
+                        img.publicacion__autor.position-absolute(src="recursos/imagenes/dot-autor-3.jpg", alt="Foto Autor de la Noticia" data-bs-toggle="tooltip" data-bs-placement="right" title="Alejandro LITWAK")
+                        figcaption.publicacion__volanta.position-absolute Economía Nacional
+                    .div.publicacion__contenido-txt.p-4.pt-0.d-flex.flex-column.justify-content-around 
+                        h4.publicacion__contenido-txt--titulo.mb-0: a.text-decoration-none.text-reset(href="") Dólar e inflación: cómo impacta el menor ritmo de devaluación sobre los precios
+                        p.publicacion__contenido-txt--cuerpo.mb-0  El Gobierno mantiene el lento avance del tipo de cambio oficial para intentar calmar la inflación. Economistas analizan los efectos que está generando esta estrategia.
+                        time.publicacion__contenido-txt--fecha(datetime="2021-8-15") Agosto 15, 2021
+        .row.py-3
+            div.col-12.col-lg-4.offset-lg-4.text-center.mb-4.my-lg-0
+                    a.publicaciones__boton.text-decoration-none.text-center.fw-bold.text-capitalize.text-white(role="button") Ir al Blog

@@ -1,0 +1,71 @@
+.testimonios {
+    &__titulo {
+        color: var(--color_fuente1);
+        font-weight: 350;
+        letter-spacing: 2px;
+        &::before {
+            content: '';
+            display: block;
+            height: 45px;
+            width: 2px;
+            margin: 0 auto 2rem auto;
+            background-color: var(--color_fuente2);
+            opacity: .5;
+        }
+    }
+    #carrusel-testimonios {
+        .testimonio {
+            &__imagen {
+                border-radius: 50%;
+            }
+            &__nombre {
+                color: var(--color_principal);
+            }
+            &__ocupacion {
+                color: var(--color_fuente2);
+                letter-spacing: 1px;
+            }
+            &__frase {
+                width: 75%;
+                text-indent: 35px;
+                @media (max-width: 991.98px) {
+                    width: 100%;
+                }
+                .fa-quote-right {
+                    text-indent: 0;
+                }
+            }
+            .fa-quote-right, .fa-quote-left {
+                color: var(--color_detalles)
+            }
+        }
+        [class^=carousel-control] :is(.fa-chevron-left, .fa-chevron-right){
+            color: var(--color_fuente2);
+            $medida: 45px;
+            width: $medida;
+            height: $medida;
+            line-height: $medida;
+            border-radius: 50%;
+            transition: all .5s;
+            filter: brightness(1.25) drop-shadow(0px 0px 1px var(--color_fondo));
+            &:hover {
+                background-color: var(--color_principal);
+                color: var(--color_b1);
+            }
+        }
+        .carousel-control-next .fa-chevron-right {
+            &::before {
+                margin-right: -5px;
+            }
+        }
+        .carousel-indicators {
+            position: initial;
+            button[data-bs-target='#carrusel-testimonios'] {
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                background-color: var(--color_principal);
+            }
+        }
+    }
+}

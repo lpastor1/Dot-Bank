@@ -1,0 +1,81 @@
+#carrusel {
+    height: 120vh;
+    color: var(--color_b1);
+    .carousel-indicators {
+        bottom: 20vh;
+        left: 12%;
+        margin: {
+            left: 0;
+            right: 0;
+        }
+    }
+    .carousel-indicators [data-bs-target="#carrusel"] {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+    .carousel-item {
+        position: relative;
+        background: {
+            size: cover;
+            position: center;
+        }
+        @media (max-width: 575.98px) {
+            background-position: {
+                x: 62%;
+                y: 80px;
+            }
+        }
+        &.--naranja {
+            background-image: url('recursos/imagenes/slider-1-1920x879.jpg');   
+        }
+        &.--verde {
+            background-image: url('recursos/imagenes/slider-2-1920x879.jpg');
+        }
+        &.--celeste {
+            background-image: url('recursos/imagenes/slider-3-1920x879.jpg');
+        }
+        .tarjeta {
+            position: absolute;
+            left: 12%;
+            top: 45%;
+            transform: translate(0, -50%);
+            @media (max-width: 575.98px) {
+                position: static;
+                margin-top: 120px;
+                transform: translate(0, 0);
+            }
+            &__descripcion {
+                @media (min-width: 576px) {
+                    width: 50%;
+                }
+            }
+            &__titulo, &__descripcion {
+                font-weight: 100;
+            }
+            &__titulo.animate__animated.animate__fadeInUp {
+                animation-delay: .5s;
+                --animate-duration: 1.5s;
+            }
+            &__descripcion.animate__animated.animate__fadeInUp {
+                animation-delay: 1s;
+            }
+            &__boton {
+                display: inline-block;
+                width: 240px;
+                height: 55px;
+                line-height: 55px;
+                border-radius: 40px;
+                background: linear-gradient(to top, #a371f7, #b796fd);
+                font-size: 1.15rem;
+                box-shadow: 0 3px 21px 4px rgb(41 41 58 / 20%);
+                transition: all .25s;
+                animation-delay: 1.5s;
+                &:hover {
+                    background: var(--color_b1);
+                    color: var(--color_principal) !important;
+                }
+            }   
+        }
+    }
+}

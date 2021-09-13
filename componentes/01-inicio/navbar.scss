@@ -1,0 +1,74 @@
+.navbar {
+    height: 80px;
+    z-index: 3;
+    &__fondo {
+        height: 80px;
+        max-height: 0px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        background: var(--color_fondo);
+        z-index: -1;
+        box-shadow: 0 0 5px 0 #000;
+        transition: max-height 250ms;
+        transition-timing-function: ease-in-out;
+        @media (max-width: 991.98px) {
+            max-height: 80px;
+        }
+    }
+    .navbar-toggler {
+        &:focus {
+            box-shadow: none;
+        }
+        &-menu { 
+            display: block;
+            width: 30px;
+            height: 4px;
+            background: #fff;
+            transition: all 200ms ease-in;
+        }
+        &[aria-expanded="true"] .navbar-toggler-menu:first-of-type{
+            transform: rotate(-210deg);
+            width: 20px;
+            transform-origin: 50% 80%;
+        }
+        &[aria-expanded="true"] .navbar-toggler-menu:nth-of-type(2) {
+            transform: rotate(180deg);
+        }
+        &[aria-expanded="true"] .navbar-toggler-menu:last-of-type {
+            transform: rotate(210deg);
+            width: 20px;
+            transform-origin: 50% 20%;
+        }
+    }
+    .nav-item {
+        .nav-link {
+            outline: {
+                width: 0.5px;
+                style: dashed;
+                color: transparent;
+                offset: -50px;
+            }
+            transition: all 500ms;
+            &:hover:not(.link__login-register) {
+                outline: {
+                    width: 2px;
+                    color: var(--color_detalles);
+                    offset: -3px;
+                }
+                text-shadow: 0px 4px 5px var(--color_detalles);
+            }
+            &.link__login-register {
+                transition: color 250ms;
+                &:hover {
+                    color: var(--color_detalles) !important;
+                }
+            }
+        }
+    }
+    .navbar-collapse {
+        @media (max-width: 991.98px) {
+            background-color: var(--color_fondo);
+        }
+    }
+}

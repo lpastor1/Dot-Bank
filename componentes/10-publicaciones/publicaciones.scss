@@ -1,0 +1,126 @@
+.publicaciones {
+    background-color: var(--color_fondo2);
+    &__intro {
+        &::before {
+            content: "";
+            display: block;
+            height: 45px;
+            width: 2px;
+            margin: 0 auto 2rem auto;
+            background-color: var(--color_fuente2);
+            opacity: .5;
+        }
+        &--titulo {
+            font-weight: 350;
+            letter-spacing: 2px;
+        }
+        &--bajada {
+            @media (min-width: 992px) {
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+    }
+    .publicacion {
+        height: 560px;
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            height: 800px;
+        }
+        &__contenedor {
+            height: 100%;
+            border-radius: 8px;
+            transition: all 500ms;
+            &:hover {
+                box-shadow: 0px 0px 10px 0px rgba(29,13,68,0.25);
+                -webkit-box-shadow: 0px 0px 10px 0px rgba(29,13,68,0.25);
+                -moz-box-shadow: 0px 0px 10px 0px rgba(29,13,68,0.25);
+            }
+        }
+        &__imagen {
+            width: 100%;
+            aspect-ratio: 2 / 1.25;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            cursor: pointer;
+            transition: filter 250ms;
+            &:hover {
+                filter: brightness(1.1) saturate(0.8);
+            }
+        }
+        &__volanta {
+            top: 25px;
+            left: 25px;
+            padding: 4px 8px;
+            background-color: var(--color_fondo);
+            font-size: 14px;
+            color: var(--color_b1);
+            cursor: pointer;
+            transition: background-color 500ms;
+            &:hover {
+                background-color: var(--color_principal);
+            }
+        }
+        &__autor {
+            bottom: -15%;
+            left: 10%;
+            box-sizing: border-box;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            background-color: #fff;
+            cursor: help;
+            &:hover {
+                border-color: var(--color_principal)
+            }
+        }
+        &__contenido-txt {
+            flex-grow: 1;
+            &--titulo {
+                color: var(--color_principal);
+                font-weight: 400;
+                &:hover {
+                    color: var(--color_fondo);
+                }
+            }
+            &--cuerpo {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: var(--color_fuente2);
+            }
+            &--fecha {
+                font-size: 14px;
+                font-weight: 350;
+            }
+        }
+    }
+    &__boton {
+        // A OPTIMIZAR - BOTONES
+        display: inline-block;
+        width: 200px;
+        height: 55px;
+        line-height: 55px;
+        border-radius: 40px;
+        background: linear-gradient(to top, #a371f7, #b796fd);
+        font-size: 1.15rem;
+        letter-spacing: 1px;
+        box-shadow: 0 0 0 0px inset var(--color_fondo),
+                    0 3px 21px 4px rgb(41 41 58 / 20%);
+        transition: box-shadow .5s linear;
+        &:hover {
+            box-shadow: 0 0 0 50px inset var(--color_fondo),
+                        0 3px 21px 4px rgb(41 41 58 / 20%);
+        }
+    }
+}
+.tooltip {
+    .tooltip-arrow {
+        &::before {
+            border-right-color: var(--color_principal);
+        }
+    }
+    .tooltip-inner {
+        background-color: var(--color_principal);
+    }
+}

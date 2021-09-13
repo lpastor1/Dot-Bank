@@ -1,0 +1,98 @@
+@mixin estadisticas-circulares($clase, $porcentaje) {
+    .flex-basis {
+        @media (min-width: 1200px) {
+            flex-basis: 200px;
+        }
+        .circulo.#{$clase} {
+            display: grid;
+            place-items: center;
+            position: relative;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #5428a4;
+            overflow: hidden;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                height: 100%;
+                width: $porcentaje;
+                background: var(--color_detalles);
+            }
+            .circulo__relleno {
+                display: inherit;
+                place-items: center;
+                width: 96%;
+                height: 96%;
+                border-radius: 50%;
+                background: var(--color_fondo);
+                position: relative;
+            }
+        }
+    }
+}
+.estadisticas {
+    &__intro {
+        @media (min-width: 1200px) {
+            width: 75%;
+        }
+        &--titulo {
+            letter-spacing: 2px;
+        }
+        &::before {
+            content: "";
+            display: block;
+            height: 45px;
+            width: 2px;
+            margin: 0 auto 2rem auto;
+            background-color: var(--color_fuente2);
+        }
+    }
+    &__barras {
+        &--pre {
+            color: var(--color_fuente2);
+        }
+        progress {
+            height: 2px;
+            appearance: none;
+            -webkit-appearance: none;
+            background-color: #5428a4;
+            border: none;
+            &::-webkit-progress-bar {
+                background-color: #5428a4;
+            }
+            &::-webkit-progress-value {
+                background-color: var(--color_detalles);
+            }
+            &::-moz-progress-bar {
+                background-color: var(--color_detalles);
+            }
+        }
+    }
+    &__circulares {
+        @include estadisticas-circulares('economía', 25%);
+        @include estadisticas-circulares('rendimiento', 50%);
+        @include estadisticas-circulares('estabilidad', 75%);
+        @include estadisticas-circulares('garantía', 100%);
+    }
+    &__boton {
+        // A OPTIMIZAR - BOTONES
+        display: inline-block;
+        width: 300px;
+        height: 55px;
+        line-height: 55px;
+        border-radius: 40px;
+        background: linear-gradient(to top, #a371f7, #b796fd);
+        font-size: 1.15rem;
+        box-shadow: 0 3px 21px 4px rgb(41 41 58 / 20%);
+        text-shadow: 15px 15px 2px var(--color_principal);
+        letter-spacing: 1px;
+        transition: all .25s;
+        &:hover {
+            background: var(--color_b1);
+            color: var(--color_principal) !important;
+            text-shadow: 0 0 10px var(--color_principal);
+        }
+    }
+}

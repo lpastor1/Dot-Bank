@@ -1,0 +1,180 @@
+.navbar {
+  height: 80px;
+  z-index: 3;
+}
+.navbar__fondo {
+  height: 80px;
+  max-height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: var(--color_fondo);
+  z-index: -1;
+  -webkit-box-shadow: 0 0 5px 0 #000;
+          box-shadow: 0 0 5px 0 #000;
+  -webkit-transition: max-height 250ms;
+  transition: max-height 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+@media (max-width: 991.98px) {
+  .navbar__fondo {
+    max-height: 80px;
+  }
+}
+.navbar .navbar-toggler:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.navbar .navbar-toggler-menu {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  -webkit-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+}
+.navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-menu:first-of-type {
+  -webkit-transform: rotate(-210deg);
+          transform: rotate(-210deg);
+  width: 20px;
+  -webkit-transform-origin: 50% 80%;
+          transform-origin: 50% 80%;
+}
+.navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-menu:nth-of-type(2) {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-menu:last-of-type {
+  -webkit-transform: rotate(210deg);
+          transform: rotate(210deg);
+  width: 20px;
+  -webkit-transform-origin: 50% 20%;
+          transform-origin: 50% 20%;
+}
+.navbar .nav-item .nav-link {
+  outline-width: 0.5px;
+  outline-style: dashed;
+  outline-color: transparent;
+  outline-offset: -50px;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+.navbar .nav-item .nav-link:hover:not(.link__login-register) {
+  outline-width: 2px;
+  outline-color: var(--color_detalles);
+  outline-offset: -3px;
+  text-shadow: 0px 4px 5px var(--color_detalles);
+}
+.navbar .nav-item .nav-link.link__login-register {
+  -webkit-transition: color 250ms;
+  transition: color 250ms;
+}
+.navbar .nav-item .nav-link.link__login-register:hover {
+  color: var(--color_detalles) !important;
+}
+@media (max-width: 991.98px) {
+  .navbar .navbar-collapse {
+    background-color: var(--color_fondo);
+  }
+}
+
+:root {
+  --color_b1: #ffffff;
+  --color_fuente1: #29293a;
+  --color_fuente2: #828590;
+  --color_principal: #7b59d0;
+  --color_fondo: #1D0D44;
+  --color_fondo2: #F3F3F9;
+  --color_detalles: #36f1f8;
+}
+
+.login-registration {
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--color_fondo);
+}
+.login-registration__container {
+  margin-top: 80px;
+  height: calc(90% - 80px);
+  color: #fff;
+}
+.login-registration__footer {
+  height: 10%;
+  color: rgba(145, 147, 155, 0.5);
+}
+.login-registration form#login, .login-registration form#register {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 250ms, opacity 500ms;
+  transition: visibility 250ms, opacity 500ms;
+}
+.login-registration form#login .inputs > * + *, .login-registration form#register .inputs > * + * {
+  margin-top: 1rem;
+}
+.login-registration form#login .inputs input, .login-registration form#register .inputs input {
+  width: clamp(300px, 100%, 400px);
+  height: 50px;
+  padding: 0 1rem;
+  border: none;
+  border-radius: 5px;
+}
+.login-registration form#login .inputs input:focus-visible, .login-registration form#register .inputs input:focus-visible {
+  outline: none;
+}
+.login-registration form#login .inputs input[type=submit], .login-registration form#register .inputs input[type=submit] {
+  height: 60px;
+  background-color: var(--color_principal);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  -webkit-box-shadow: 0 10px 20px 1px inset rgba(225, 225, 225, 0.3);
+          box-shadow: 0 10px 20px 1px inset rgba(225, 225, 225, 0.3);
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+.login-registration form#login .inputs input[type=submit]:hover, .login-registration form#register .inputs input[type=submit]:hover {
+  background-color: #fff;
+  color: var(--color_principal);
+}
+.login-registration form#login .inputs .bi-eye-fill, .login-registration form#login .inputs .bi-eye-slash-fill, .login-registration form#register .inputs .bi-eye-fill, .login-registration form#register .inputs .bi-eye-slash-fill {
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  margin-left: -25px;
+  color: var(--color_principal);
+  cursor: pointer;
+}
+.login-registration input#input-register:checked ~ form#register,
+.login-registration input#input-login:checked ~ form#login {
+  visibility: visible;
+  opacity: 1;
+}
+.login-registration .login-registration__labels {
+  font-size: 0;
+}
+.login-registration .login-registration__labels [for=input-register], .login-registration .login-registration__labels [for=input-login] {
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--color_fuente2);
+  font-size: 1.13rem;
+  font-weight: 300;
+  color: var(--color_fuente2);
+  cursor: pointer;
+  -webkit-transition: border-bottom 500ms;
+  transition: border-bottom 500ms;
+}
+.login-registration .login-registration__labels [for=input-login] {
+  padding-right: 0.75rem;
+}
+.login-registration .login-registration__labels [for=input-register] {
+  padding-left: 0.75rem;
+}
+.login-registration input#input-register:checked ~ .login-registration__labels label[for=input-register],
+.login-registration input#input-login:checked ~ .login-registration__labels label[for=input-login] {
+  font-weight: 400;
+  color: var(--color_detalles);
+  border-bottom: 1px solid var(--color_detalles);
+}

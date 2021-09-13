@@ -1,0 +1,19 @@
+footer.footer.container.py-5
+    div.row.gx-5.gy-5.py-5.row-cols-lg-3
+        div.footer__sobre.d-flex.flex-column.align-items-start.justify-content-between.col-lg-4.col-md-6.col-12
+            h4.footer__titulo-seccion.mb-4 Sobre Nosotros
+            p.footer__sobre--parrafo.mb-5 Dot Bank es el establecimiento financiero líder que ofrece servicios bancarios internacionales de más alta calidad. Nuestro éxito se atribuye a nuestros clientes leales y al talento y la dedicación de nuestros empleados profesionales y capacitados. Siempre estamos dispuestos a asociarnos con tu PyME o emprendimiento, ofreciendo apoyo financiero completo a nuestros clientes en todo el mundo.
+            img(src="recursos/imagenes/logo-inverse-145x39.png", alt="Logotipo .Bank" class="mt-5")
+        div.footer__twitter.d-flex.flex-column.col-lg-4.col-md-6.col-12
+            h4.footer__titulo-seccion.mb-4 Twitter Feed
+            <a class="twitter-timeline" data-width="600" data-height="300" data-theme="dark" href="https://twitter.com/brubankarg?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        div.footer__contactanos.col-lg-4.col-12
+            h4.footer__titulo-seccion.mb-4 ¡Contáctanos!
+            form(action="login_registration.html", method="post") 
+                input.footer__contactanos--input.d-block.w-100.border-0(type="text", name="nombre" placeholder="Nombre" required)
+                input.footer__contactanos--input.d-block.w-100.border-0.my-2(type="email", name="email" placeholder="Correo Electrónico" required)
+                <textarea class="d-block w-100 border-0 mb-2 footer__contactanos--mensaje" name="" cols="30", rows="10" placeholder="Mensaje..." required></textarea>
+                button.footer__contactanos--enviar.border-0.px-5(type="submit") Enviar
+    div.row.footer__derechos.mt-5 
+        span ©  2021 All rights reserved. 
+            a.footer__derechos--link.text-decoration-none.text-reset Privacy Policy

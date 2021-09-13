@@ -1,0 +1,69 @@
+.detalles {
+    background-color: var(--color_fondo2);
+    &__intro {
+        width: 75%;
+        @media (max-width: 767.98px) { 
+            width: 100%;
+        }
+        &::before {
+            content: '';
+            display: block;
+            height: 45px;
+            width: 2px;
+            margin: 0 auto 2rem auto;
+            background-color: var(--color_fuente2);
+            opacity: .5;
+        }
+    }
+    &__tarjetas {
+        &--frase {
+            .fa-quote-left {
+                color: var(--color_principal);
+            }
+            blockquote {
+                line-height: 2.25rem;
+            }
+            cite {
+                color: var(--color_principal);
+                font-style: normal;
+            }
+            cite + span {
+                font-size: 0.9rem;
+                color: var(--color_fuente2);
+            }
+        }
+        &--icono {
+            color: var(--color_principal);
+        }
+        &--parrafo {
+            color: var(--color_fuente2);
+        }
+    }
+    &__mision {
+        &--p-primario {
+            font-size: 1.1rem;
+        }
+        &--p-secundario {
+            font-size: 0.9rem;
+            line-height: 1.75rem;
+        }
+        &--boton {
+            // A OPTIMIZAR - BOTONES
+            display: inline-block;
+            width: 200px;
+            height: 55px;
+            line-height: 55px;
+            border-radius: 40px;
+            background: linear-gradient(to top, #a371f7, #b796fd);
+            font-size: 1.15rem;
+            letter-spacing: 1px;
+            box-shadow: 0 0 0 0px inset var(--color_fondo),
+                        0 3px 21px 4px rgb(41 41 58 / 20%);
+            transition: box-shadow .5s linear;
+            &:hover {
+                box-shadow: 0 0 0 50px inset var(--color_fondo),
+                            0 3px 21px 4px rgb(41 41 58 / 20%);
+            }
+        }
+    }
+}

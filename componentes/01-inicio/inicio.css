@@ -1,0 +1,68 @@
+#carrusel {
+  height: 120vh;
+  color: var(--color_b1);
+}
+#carrusel .carousel-indicators {
+  bottom: 20vh;
+  left: 12%;
+  margin-left: 0;
+  margin-right: 0;
+}
+#carrusel .carousel-indicators [data-bs-target="#carrusel"] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+#carrusel .carousel-item {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+#carrusel .carousel-item.--naranja {
+  background-image: url("recursos/imagenes/slider-1-1920x879.jpg");
+}
+#carrusel .carousel-item.--verde {
+  background-image: url("recursos/imagenes/slider-2-1920x879.jpg");
+}
+#carrusel .carousel-item.--celeste {
+  background-image: url("recursos/imagenes/slider-3-1920x879.jpg");
+}
+#carrusel .carousel-item .tarjeta {
+  position: absolute;
+  left: 12%;
+  top: 45%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+#carrusel .carousel-item .tarjeta__titulo, #carrusel .carousel-item .tarjeta__descripcion {
+  font-weight: 100;
+}
+#carrusel .carousel-item .tarjeta__titulo.animate__animated.animate__fadeInUp {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  --animate-duration: 1.5s;
+}
+#carrusel .carousel-item .tarjeta__descripcion.animate__animated.animate__fadeInUp {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+#carrusel .carousel-item .tarjeta__boton {
+  display: inline-block;
+  width: 240px;
+  height: 55px;
+  line-height: 55px;
+  border-radius: 40px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#a371f7), to(#b796fd));
+  background: linear-gradient(to top, #a371f7, #b796fd);
+  font-size: 1.15rem;
+  -webkit-box-shadow: 0 3px 21px 4px rgba(41, 41, 58, 0.2);
+          box-shadow: 0 3px 21px 4px rgba(41, 41, 58, 0.2);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+#carrusel .carousel-item .tarjeta__boton:hover {
+  background: var(--color_b1);
+  color: var(--color_principal) !important;
+}

@@ -1,0 +1,150 @@
+.datos {
+    height: 40vh;
+    @media (max-width: 1199.98px) { 
+        height: 60vh;
+    }
+    @media (max-width: 991.98px) { 
+        height: auto;
+    }
+    & article.col:first-of-type span {
+        @media (max-width: 344px) {
+            white-space: normal;
+        }
+    }
+    &__placa {
+        top: -100px;
+        min-height: 300px;
+        background-color: var(--color_b1);
+        border-radius: 5px;
+        z-index: 1;
+        @media (max-width: 767.98px) { 
+            min-height: 0 !important;
+        }
+        &--icono {
+            vertical-align: baseline;
+        }
+        &--cifras {
+            small {
+                color: var(--color_fuente2);
+            }
+            big {
+                line-height: 3rem;
+                &.tarjetas {
+                    &::before {
+                        content: '';
+                        animation: conteoTarjetas 1.5s forwards;
+                    }
+                }
+                &.devolucion {
+                    &::before {
+                        content: '';
+                        animation: conteoDevolucion 1.5s forwards;
+                    }
+                }
+                &.rendimiento {
+                    &::before {
+                        content: '';
+                        animation: conteoRendimiento 1.5s forwards;
+                    }
+                }
+            }
+            span {  
+                letter-spacing: 1.5px;
+            }
+        }
+        &--detalle {
+            color: var(--color_fuente2);
+            text-align: justify;
+        }
+    }
+}
+@keyframes conteoTarjetas {
+    0% {content: '0';}
+    5% {content: '4';}
+    10% {content: '11';}
+    15% {content: '28';}
+    20% {content: '35';}
+    25% {content: '86';}
+    30% {content: '291';}
+    35% {content: '323';}
+    40% {content: '589';}
+    45% {content: '814';}
+    50% {content: '1.233';}
+    55% {content: '2.847';}
+    60% {content: '3.099';}
+    65% {content: '5.901';}
+    70% {content: '7.554';}
+    75% {content: '10.198';}
+    80% {content: '12.306';}
+    85% {content: '14.777';}
+    90% {content: '21.973';}
+    95% {content: '22.322';}
+    100% {content: '23.754';}
+}  
+
+@keyframes conteoDevolucion{
+    0% {content: '0%';}
+    3% {content: '1%';}
+    6% {content: '2%';}
+    9% {content: '3%';}
+    12% {content: '4%';}
+    15% {content: '5%';}
+    18% {content: '6%';}
+    21% {content: '7%';}
+    24% {content: '8%';}
+    27% {content: '9%';}
+    30% {content: '10%';}
+    33% {content: '11%';}
+    36% {content: '12%';}
+    39% {content: '13%';}
+    42% {content: '14%';}
+    45% {content: '15%';}
+    48% {content: '16%';}
+    51% {content: '17%';}
+    54% {content: '18%';}
+    57% {content: '19%';}
+    60% {content: '20%';}
+    63% {content: '21%';}
+    66% {content: '22%';}
+    69% {content: '23%';}
+    72% {content: '24%';}
+    75% {content: '25%';}
+    78% {content: '26%';}
+    81% {content: '27%';}
+    84% {content: '28%';}
+    87% {content: '29%';}
+    90% {content: '30%';}
+    93% {content: '31%';}
+    96% {content: '32%';}
+    99% {content: '33%';}
+    100% {content: '34%';}
+}  
+
+@keyframes conteoRendimiento{
+    0% {content: '0%';} 
+    4% {content: '1%';}
+    8% {content: '2%';}
+    12% {content: '3%';}
+    16% {content: '4%';}
+    20% {content: '5%';}
+    24% {content: '6%';}
+    28% {content: '7%';}
+    32% {content: '8%';}
+    36% {content: '9%';}
+    40% {content: '10%';}
+    44% {content: '11%';}
+    48% {content: '12%';}
+    52% {content: '13%';}
+    56% {content: '14%';}
+    60% {content: '15%';}
+    64% {content: '16%';}
+    68% {content: '17%';}
+    72% {content: '18%';}
+    76% {content: '10%';}
+    80% {content: '20%';}
+    84% {content: '21%';}
+    88% {content: '22%';}
+    92% {content: '23%';}
+    96% {content: '24%';}
+    100% {content: '25%';}
+}  

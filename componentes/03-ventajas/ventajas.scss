@@ -1,0 +1,114 @@
+@mixin icono-ventajas($orientacion) {
+    float: $orientacion;
+    width: 75px;
+    height: 65px;
+    margin: {
+        top: 0;
+        bottom: 2rem;
+    }
+    @if $orientacion == left {
+        margin-left: 0;
+        margin-right: 2rem;
+    } @else {
+        margin-left: 2rem;
+        margin-right: 0;
+    }
+    background: linear-gradient(90deg, #7b59d0, #36f1f8);
+    font-size: 3.4rem;
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @media (max-width: 575.98px) { 
+        float: initial;
+        margin: 0 0 1rem 0;
+    }
+}
+
+.ventajas {
+    height: 150vh;
+    color: var(--color_b1);
+    @media (max-width: 991.98px) { 
+        height: auto;
+    }
+    &__intro {
+        height: 20%;
+        width: 75%;
+        @media (max-width: 991.98px) { 
+            width: 100%;
+        }
+        &::before {
+            content: '';
+            display: block;
+            height: 45px;
+            width: 2px;
+            margin: {
+                top: 0;
+                left: auto;
+                right: auto;
+                bottom: 2rem;
+            }
+            background-color: var(--color_b1);
+            opacity: .5;
+        }
+    }
+    &__grid {
+        height: 65%;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        @media (max-width: 991.98px) { 
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+        &--left {
+            gap: 4rem;
+            .icono {
+                @include icono-ventajas(right);
+            }
+        }
+        &--right {
+            gap: 4rem;
+            .icono {
+                @include icono-ventajas(left);
+            }      
+        }
+        &--left, &--right {
+            .icono.up {
+                font-size: 4rem;
+            }
+            .ventajas__texto {
+                &--titulo {
+                    margin: 0;
+                    margin-bottom: 1rem;
+                    font-size: 1.25rem;
+                    font-weight: normal;
+                }
+                &--parrafo {
+                    margin: 0;
+                    color: var(--color_fuente2);
+                }
+            }
+        }    
+    }
+    &__inferior {
+        height: 10%;
+        &--boton {
+            // A OPTIMIZAR - BOTONES
+            display: inline-block;
+            width: 300px;
+            height: 55px;
+            line-height: 55px;
+            border-radius: 40px;
+            background: linear-gradient(to top, #a371f7, #b796fd);
+            font-size: 1.15rem;
+            box-shadow: 0 3px 21px 4px rgb(41 41 58 / 20%);
+            text-shadow: 15px 15px 2px var(--color_principal);
+            letter-spacing: 1px;
+            transition: all .25s;
+            &:hover {
+                background: var(--color_b1);
+                color: var(--color_principal) !important;
+                text-shadow: 0 0 10px var(--color_principal);
+            }
+        }
+    }
+}

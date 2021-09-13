@@ -1,0 +1,97 @@
+@use 'componentes/01-inicio/navbar.scss';
+
+:root {
+    --color_b1: #ffffff;
+    --color_fuente1: #29293a;
+    --color_fuente2: #828590;
+    --color_principal: #7b59d0;
+    --color_fondo: #1D0D44;
+    --color_fondo2: #F3F3F9;
+    --color_detalles: #36f1f8;
+}
+.login-registration {
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--color_fondo);
+    &__container {
+        margin-top: 80px;
+        height: calc(90% - 80px);
+        color: #fff;
+    }
+    &__footer {
+        height: 10%;
+        color: rgba(145, 147, 155, 0.5);
+    }
+    form#login, form#register {
+        position: absolute;
+        top: 200px;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 250ms, opacity 500ms;
+        .inputs {
+            > * + * {
+                margin-top: 1rem;
+            }
+            input {
+                width: clamp(300px, 100%, 400px);
+                height: 50px;
+                padding: 0 1rem;
+                border: none;
+                border-radius: 5px;
+                &:focus-visible {
+                    outline: none;
+                }
+                &[type="submit"] {
+                    height: 60px;
+                    background-color: var(--color_principal);
+                    color: #fff;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    box-shadow: 0 10px 20px 1px inset rgb(225 225 225 / 30%);
+                    transition: all 250ms;
+                    &:hover {
+                        background-color: #fff;
+                        color: var(--color_principal);
+                    }
+                }
+            }
+            .bi-eye-fill, .bi-eye-slash-fill {
+                top: 50%;
+                transform: translate(0, -50%);
+                margin-left: -25px;
+                color: var(--color_principal);
+                cursor: pointer;
+            }
+        }
+    }
+    input#input-register:checked ~  form#register,
+    input#input-login:checked ~  form#login {
+        visibility: visible;
+        opacity: 1;
+    }
+    .login-registration__labels {
+        font-size: 0;
+        [for="input-register"], [for="input-login"] {
+            padding-bottom: .25rem;
+            border-bottom: 1px solid var(--color_fuente2);
+            font-size: 1.13rem;
+            font-weight: 300;
+            color: var(--color_fuente2);
+            cursor: pointer;
+            transition: border-bottom 500ms;
+        }
+        [for="input-login"] {
+            padding-right: .75rem;
+        }
+        [for="input-register"] {
+            padding-left: .75rem;
+        }
+    }
+    input#input-register:checked ~ .login-registration__labels label[for="input-register"], 
+    input#input-login:checked ~ .login-registration__labels label[for="input-login"] {
+        font-weight: 400;
+        color: var(--color_detalles);
+        border-bottom: 1px solid var(--color_detalles);
+    }
+}

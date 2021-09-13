@@ -1,0 +1,40 @@
+mixin estadisticas-barra(nombre, porcentaje)
+    div.my-4
+        .d-flex.justify-content-between.mb-0
+            label(for="consulta")= nombre
+            span #{porcentaje}%
+        <progress class="w-100" id="file" max="100" value='#{porcentaje}'> #{porcentaje}% </progress>
+        
+mixin estadisticas-circulares(nombre, porcentaje)
+    .col-6.text-center.flex-basis
+        div(class="circulo mx-auto mb-2", class= nombre)
+            div.circulo__relleno
+                span.fw-bold.fs-4 #{porcentaje}%
+        span.text-capitalize= nombre
+
+section.vw-100.estadisticas#estadisticas
+    .container.text-white  
+        .row.justify-content-center.text-center.my-5.mx-auto.estadisticas__intro
+            h3.display-5.mb-4.estadisticas__intro--titulo Estadísticas
+            p  Nuestro Banco recopila y publica periódicamente una serie de estadísticas monetarias y financieras. Estos incluyen guarismos bancarios nacionales, financieros externos y estadísticas bancarias internacionales.
+        .row 
+            div.col-12.col-xxl-4.mb-0.mb-md-4
+                p.text-center.text-xxl-start.mb-0.mb-md-4(style="line-height: 2rem") Con el desarrollo de la banca en línea, pagos con QR y de tecnología Contactless, nuestro número de clientes aumentó hasta 6 millones en todo el mundo. 
+            div.col-12.col-md-6.col-xxl-4.my-5.my-xxl-0 
+                div.estadisticas__circulares.row.gy-5.justify-content-center
+                    +estadisticas-circulares('economía', 25)
+                    +estadisticas-circulares('rendimiento', 50)
+                    +estadisticas-circulares('estabilidad', 75)
+                    +estadisticas-circulares('garantía', 100)
+            div.col-12.col-md-6.col-xxl-4.estadisticas__barras
+                p.mb-3.estadisticas__barras--pre Nuestros servicios financieros se basan profundamente en ciertos procedimientos bancarios que se han perfeccionado a lo largo de los años y nos ayudaron a obtener prestigiosos premios.
+                div
+                    +estadisticas-barra('Inclusión Bancaria', 75)
+                    +estadisticas-barra('Transformación Digital', 90)
+                    +estadisticas-barra('Asesoramiento Financiero', 60)
+                    +estadisticas-barra('Soporte 24/7', 75)
+        .row.py-3
+            div.col-12.col-lg-4.offset-lg-4.text-center.my-5.my-lg-0
+                    a.estadisticas__boton.text-decoration-none.text-reset.text-center.fw-bold.text-capitalize(role="button") Ver más estadísticas
+
+
