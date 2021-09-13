@@ -1331,7 +1331,7 @@
 }
 .preguntas_frecuentes .accordion-button {
   padding: 2rem 1rem 1rem 0;
-  font-size: 1.25rem;
+  font-size: 1.13rem;
   color: var(--color_b1);
 }
 .preguntas_frecuentes .accordion-button:focus {
